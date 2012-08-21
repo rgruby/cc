@@ -34,6 +34,12 @@ describe "Static pages" do
     it_should_behave_like "all static pages"
   end
 
+  describe "Contact page" do
+    before { visit contact_path }
+
+    it { should have_selector('h1',    text: 'Contact') }
+    it { should have_selector('title', text: full_title('Contact')) }
+  end
 
   # Test the links by actually visiting them.
   it "should have the right links on the layout" do

@@ -75,3 +75,41 @@
 // $tooltipFontSizeScreenSmall: 14;
 // $tooltipBackgroundOpacityScreenSmall: 0.85;
 @import 'foundation';
+
+/* Zurb Foundation overrides/extensions */
+
+.nav-bar {
+  margin-top: 0px;
+}
+
+.nav-bar-box {
+  @extend .nav-bar;
+}
+
+.error-panel {
+  @extend .panel;
+  background-color: rgba($alertColor, 0.1);
+}
+
+// map flash hash keys to foundation alert-box styling.
+.alert-success {
+	@extend .success;
+}
+
+.alert-notice {
+	//intentionally blank
+}
+
+.alert-error {
+	@extend .alert;
+}
+
+
+/* Rails classes */
+.debug_dump {
+  @extend .panel;
+}
+
+.field_with_errors {
+  @extend .error;
+ }

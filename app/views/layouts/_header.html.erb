@@ -1,8 +1,10 @@
 <header>
-  <%= link_to "sample app", root_path, id: "logo" %>
-  <ul class="nav-bar">
-    <li class="active"><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Help",    help_path %></li>
-    <li><%= link_to "Sign in", '#' %></li>
-  </ul>
+  <div class="nav-bar-box">
+    <%= link_to "sample app", root_path, id: "logo", :class => "left" %>
+    <ul class="nav-bar right">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Help",    help_path %></li>
+      <li><%= link_to "Sign in", '#' %></li>
+    </ul>
+  </div>
 </header>

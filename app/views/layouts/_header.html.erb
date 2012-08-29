@@ -2,9 +2,9 @@
   <div class="nav-bar-box">
     <%= link_to "sample app", root_path, id: "logo", :class => "left" %>
     <ul class="nav-bar right">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Help",    help_path %></li>
-      <li><%= link_to "Sign in", '#' %></li>
+      <%= nav_link "Home", root_path %>
+      <%= nav_link "Help", help_path %>
+      <%= nav_link "Sign in", '#' %>
     </ul>
   </div>
 </header>

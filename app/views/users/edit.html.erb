@@ -1,7 +1,7 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, "Edit user") %> 
 <div class="row">
   <div class="six columns offset-by-three">
-    <h1 class="text-center">Sign up</h1>
+    <h1 class="text-center">Update your profile</h1>
   </div>
 </div>
 
@@ -19,10 +19,13 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "large radius button" %>
+      <%= f.submit "Save changes", class: "large radius button" %>
     <% end %>
+
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails">change</a>
   </div>
 </div>

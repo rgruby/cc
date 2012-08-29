@@ -12,7 +12,7 @@
           <a href="#" class="flyout-toggle"><span> </span></a>
           <ul class="flyout">
             <li><%= link_to "Profile", current_user %></li>
-            <li><%= link_to "Settings", '#' %></li>
+            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
             <li class="divider"></li>
             <li>
               <%= link_to "Sign out", signout_path, method: "delete" %>

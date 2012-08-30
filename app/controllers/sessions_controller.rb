@@ -7,9 +7,11 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      redirect_to user
+      # Use this method in non-logged-in case user tries to access protected page.
+      # Redirect to the the intended page after sign-in.
+      redirect_back_or user
     else
-      flash.now[:error] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:error] = 'Invalid email/password combination'
       render 'new'
     end
   end

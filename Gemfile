@@ -26,6 +26,8 @@ gem 'jquery-rails', '2.0.2'
 # Not in :assets because heroku needs this to deliver .js.coffee templates.
 gem 'coffee-rails', '3.2.2'
 
+gem 'd3-rails'
+
 group :test, :development do
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'

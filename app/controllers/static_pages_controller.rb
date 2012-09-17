@@ -9,5 +9,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
-  end  
+  end
+
+  def d3
+  	@data = 42
+  end
 end

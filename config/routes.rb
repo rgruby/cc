@@ -11,6 +11,8 @@ SampleApp2::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact',   to: 'static_pages#contact'
 
+  match '/d3',   to: 'static_pages#d3'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

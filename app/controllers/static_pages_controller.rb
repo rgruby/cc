@@ -12,6 +12,6 @@ class StaticPagesController < ApplicationController
   end
 
   def d3
-  	@data = 42
+  	gon.d3data = [100, 140, 180, 220]
   end
 end

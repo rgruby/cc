@@ -12,6 +12,8 @@ SampleApp2::Application.routes.draw do
   match '/contact',   to: 'static_pages#contact'
 
   match '/d3',   to: 'static_pages#d3'
+
+  match '/endless-users', to: 'users#endless'
   
 
   # The priority is based upon order of creation:

@@ -91,7 +91,7 @@
   background-color: rgba($alertColor, 0.1);
 }
 
-// map flash hash keys to foundation alert-box styling.
+// Map flash hash keys to Zurb Foundation alert-box styling.
 .alert-success {
 	@extend .success;
 }
@@ -104,6 +104,10 @@
 	@extend .alert;
 }
 
+// Map endless page styling to Zurb Foundation pagination styling.
+.endless-pagination {
+  @extend .pagination
+}
 
 /* Rails classes */
 .debug_dump {

@@ -1,0 +1,6 @@
+	$('#users').append('<%= j render(@users) %>');
+<% if @users.next_page %>
+  $('.endless-pagination').replaceWith('<%= j page_navigation_links(@users, 'endless-pagination') %>');
+<% else %>
+  $('.endless-pagination').remove();
+<% end %>

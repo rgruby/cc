@@ -1,0 +1,11 @@
+<% provide(:title, 'All users') %>
+<h1>Endless Users</h1>
+
+<div id="endless-users">
+
+	<ul id="users" class="users">
+	  <%= render @users %>
+	</ul>
+
+	<%= page_navigation_links @users, 'endless-pagination' %>
+</div>

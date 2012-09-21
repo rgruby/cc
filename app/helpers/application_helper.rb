@@ -42,8 +42,8 @@ module ApplicationHelper
     end
   end
  
-  def page_navigation_links(pages)
-    will_paginate(pages, :class => 'pagination', :inner_window => 2, :outer_window => 0, :renderer => ZurbLinkRenderer, :previous_label => '&laquo;'.html_safe, :next_label => '&raquo;'.html_safe)
+  def page_navigation_links(pages, classname='pagination')
+    will_paginate(pages, :class => classname, :inner_window => 2, :outer_window => 0, :renderer => ZurbLinkRenderer, :previous_label => '&laquo;'.html_safe, :next_label => '&raquo;'.html_safe)
   end
 
 end

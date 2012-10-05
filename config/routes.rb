@@ -12,6 +12,7 @@ SampleApp2::Application.routes.draw do
   match '/contact',   to: 'static_pages#contact'
 
   match '/d3',   to: 'static_pages#d3'
+  match 'masonry',  to: 'static_pages#masonry'
 
   match '/endless-users', to: 'users#endless'
   

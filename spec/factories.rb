@@ -9,4 +9,10 @@ FactoryGirl.define do
       admin true
     end
   end
+
+  factory :post do
+    sequence(:name)  { |n| "Post #{n}" }
+    image_url "http://google.com"
+    link_url "http://google.com"
+  end  
 end

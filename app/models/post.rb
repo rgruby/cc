@@ -12,6 +12,7 @@
 
 class Post < ActiveRecord::Base
   attr_accessible :image_url, :link_url, :name
+  has_many :comments, dependent: :destroy
 
   validates :name,  presence: true, length: { maximum: 50 }
   # URI validation is "good enough" but allows some bogus values, e.g., "http://"

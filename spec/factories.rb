@@ -14,5 +14,10 @@ FactoryGirl.define do
     sequence(:name)  { |n| "Post #{n}" }
     image_url "http://google.com"
     link_url "http://google.com"
-  end  
+  end
+
+  factory :comment do
+    content "Lorem ipsum"
+    user
+  end
 end

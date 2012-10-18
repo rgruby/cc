@@ -17,13 +17,10 @@ describe "Post pages" do
 
     describe "pagination" do
 
-      before(:all) { 30.times { FactoryGirl.create(:post) } }
+      before(:all) { 50.times { FactoryGirl.create(:post) } }
       after(:all)  { Post.delete_all }
 
-#      it { should have_pagination_list }
-it "should be cool" do
-	page.should have_selector('div.photoSocial', text: 'pins')
-end
+      it { should have_pagination_list }
 
       it "should list each post" do
         Post.paginate(page: 1).each do |post|

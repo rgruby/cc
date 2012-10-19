@@ -1,0 +1,6 @@
+	$('#masonry').append('<%= j render(@posts) %>');
+<% if @posts.next_page %>
+  $('.endless-pagination').replaceWith('<%= j page_navigation_links(@posts, 'endless-pagination') %>');
+<% else %>
+  $('.endless-pagination').remove();
+<% end %>

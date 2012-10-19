@@ -1,0 +1,11 @@
+<% provide(:title, 'All Posts') %>
+
+<div id="endless-posts">
+
+	<div id="masonry" class="posts">
+	  <%= render @posts %>
+	</div>
+
+	<%= page_navigation_links @posts, 'endless-pagination' %>
+</div>
+<%= javascript_include_tag "masonry_test" %>

@@ -17,6 +17,7 @@ SampleApp2::Application.routes.draw do
   match 'masonry',  to: 'static_pages#masonry'
 
   match '/endless-users', to: 'users#endless'
+  match '/endless-posts', to: 'posts#endless'
   
 
   # The priority is based upon order of creation:

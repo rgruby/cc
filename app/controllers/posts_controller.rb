@@ -10,8 +10,8 @@ class PostsController < ApplicationController
     @posts = Post.page(params[:page])
   end
 
-#  def endless
-#    # endless page
-#    @users = User.page(params[:page]).per_page(10)
-#  end
+  def endless
+    # endless page
+    @posts = Post.page(params[:page]).per_page(20)
+  end
 end

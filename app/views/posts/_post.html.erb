@@ -8,42 +8,29 @@
 	  </div>
 	  <div>
 	  	<div class="photoSocial">
-	  		13 pins
+	  		n pins
 		  </div>
 		  <div class="photoSocial">
-		  	25 likes
+		  	n likes
 		  </div>
 		  <div class="photoSocial">
-		  	3 comments
+		  	<%= pluralize(post.comments.count, 'comment') %>
 		  </div>
 		</div>
 	</div>
-	<div class="comments">
-		<div class="comment">
-			<div class="commentAvatar">
-				<img src="http://www.gravatar.com/avatar/0?d=mm&s=40" alt="" />
-			</div>
-		  <div class="commentText">
-		    A comment. asdf afdasdf adsf a ewrrw eod afef sfaf eeeawr asdfa asdfasfd asdwewfas fd fsd afsd asfd asfa asdf as sdf afdasdf adsf a ewrrw eod afef sfaf eeeawr asdfa asdfasfd asdwewfas fd fsd afsd asfd asfa asdf as sdf afdasdf adsf a ewrrw eod afef sfaf eeeawr asdfa asdfasfd asdwewfas fd fsd afsd asfd asfa asdf as
-	    </div>
-	  </div>
-	  <hr/>
-		<div class="comment">
-			<div class="commentAvatar">
-				<img src="http://www.gravatar.com/avatar/0?d=mm&s=40" alt="" />
-			</div>
-		  <div class="commentText">
-		    Another comment. You can see that this one is shorter. 
-	    </div>
-	  </div>
-	  <hr/>
-		<div class="comment">
-			<div class="commentAvatar">
-				<img src="http://www.gravatar.com/avatar/0?d=mm&s=40" alt="" />
-			</div>
-		  <div class="commentText">
-		    A third comment. Shorter still.
-	    </div>
-	  </div>
-	</div>
+	<% if post.comments.any? %>
+		<div class="comments">
+			<% for comment in post.comments %>
+				<div class="comment">
+					<div class="commentAvatar">
+						<img src="http://www.gravatar.com/avatar/0?d=mm&s=40" alt="" />
+					</div>
+				  <div class="commentText">
+				  	<%= comment.content %>
+			    </div>
+			  </div>
+			  <hr/>
+			 <% end %>
+		</div>
+	<% end %>
 </div>

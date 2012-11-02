@@ -1,1 +1,0 @@
-jQuery("#paged-posts").html("<%= escape_javascript(render("paged_posts")) %>")

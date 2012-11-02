@@ -19,6 +19,7 @@ namespace :db do
     50.times do |n|
       word = Faker::Lorem.words(1)[0]
       if word == 'cum' then word = 'manum' end
+      if word == 'error' then word = 'viz' end
       name = word.capitalize
       image_url = "http://placehold.it/280x" + (150 + rand(4)*40).to_s + "/CCCCCC/000000&text=" + name
       link_url = "http://www.google.com/search?q=" + name
